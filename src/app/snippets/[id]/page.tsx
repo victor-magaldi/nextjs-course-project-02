@@ -6,6 +6,8 @@ interface SnippetShowPageProps {
   };
 }
 export default async function SnippetShowPage(props: SnippetShowPageProps) {
+  await new Promise((r) => setTimeout(r, 2000));
+
   const {
     params: { id: snippedId },
   } = props;
