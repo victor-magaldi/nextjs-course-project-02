@@ -9,11 +9,12 @@ export default async function SnippetShowPage(props: SnippetShowPageProps) {
   await new Promise((r) => setTimeout(r, 2000));
 
   const {
-    params: { id: snippedId },
+    params: { id },
   } = props;
+  const snippedId = parseInt(id);
 
   const snippet = await db.snippet.findFirst({
-    where: { id: Number(snippedId) },
+    where: { id: snippedId },
     select: {
       code: true,
       id: true,
