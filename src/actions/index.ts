@@ -29,8 +29,6 @@ export async function createSnippet(
         code,
       },
     });
-
-    redirect("/");
   } catch (err) {
     if (err instanceof Error) {
       return {
@@ -42,6 +40,7 @@ export async function createSnippet(
       };
     }
   }
+  redirect("/");
 }
 
 export async function editSnippet(id: number, code: string) {
