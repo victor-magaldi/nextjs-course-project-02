@@ -23,11 +23,11 @@ export default async function SnippetShowPage(props: SnippetShowPageProps) {
       title: true,
     },
   });
-  const deleteSnippetAction = actions.deleteSnippet.bind(null, snippet.id);
 
   if (!snippet) {
     return notFound();
   }
+  const deleteSnippetAction = actions.deleteSnippet.bind(null, snippet.id);
   return (
     <div>
       <div className="flex m-4 justify-between items-center ">
