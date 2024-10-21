@@ -1,13 +1,12 @@
 import { notFound } from "next/navigation";
 import { db } from "@/db";
+import { SnippetEditForm } from "@/components/SnippetEditForm";
 interface SnippetShowPageProps {
   params: {
     id: string;
   };
 }
-export default async function SnippetShowPage(props: SnippetShowPageProps) {
-  await new Promise((r) => setTimeout(r, 2000));
-
+export default async function SnippetEditPage(props: SnippetShowPageProps) {
   const {
     params: { id },
   } = props;
@@ -24,5 +23,10 @@ export default async function SnippetShowPage(props: SnippetShowPageProps) {
   if (!snippet) {
     return notFound();
   }
-  return <div>editing snippet with id {String(snippedId)}</div>;
+  return (
+    <div>
+      <SnippetEditForm snippet={snippet} />
+      editing snippet with id {String(snippedId)}, {snippet.title}
+    </div>
+  );
 }
