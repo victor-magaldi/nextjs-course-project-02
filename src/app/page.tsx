@@ -8,7 +8,10 @@ export default async function Home() {
     <div>
       <div className="flex m-2 justify-between items-center">
         <h1 className="text-xl font-bold">Snippet</h1>
-        <Link href={"/snippets/new"} className="border p-2 rounded">
+        <Link
+          href={"/snippets/new"}
+          className="bg-purple-600 text-white font-bold py-2 px-4 rounded shadow-md hover:bg-purple-700"
+        >
           New
         </Link>
       </div>
@@ -20,7 +23,7 @@ export default async function Home() {
             <Link
               key={id}
               href={`/snippets/${id}`}
-              className="flex justify-between items-center p-2 border rounded"
+              className="flex justify-between items-center bg-purple-600 text-white font-bold py-2 px-4 rounded shadow-md hover:bg-purple-700"
             >
               <div>{title}</div>
               <div>View</div>
