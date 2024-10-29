@@ -29,7 +29,10 @@ export function SnippetEditForm({ snippet }: SnippetEditFormProps) {
         onChange={handleEditorChange}
       />
       <form action={editSnippetAction}>
-        <button type="submit" className="p-2 border rounded">
+        <button
+          type="submit"
+          className="bg-purple-600 text-white font-bold py-2 px-4 rounded shadow-md hover:bg-purple-700"
+        >
           Save
         </button>
       </form>

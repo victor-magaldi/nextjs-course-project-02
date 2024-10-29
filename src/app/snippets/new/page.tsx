@@ -39,7 +39,10 @@ export default function SnippetCreatePage() {
           </div>
         ) : null}
 
-        <button type="submit" className=" rounded p-2 bg-blue-200">
+        <button
+          type="submit"
+          className="bg-purple-600 text-white font-bold py-2 px-4 rounded shadow-md hover:bg-purple-700"
+        >
           Create
         </button>
       </div>
